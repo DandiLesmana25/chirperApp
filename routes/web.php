@@ -36,7 +36,7 @@ Route::middleware('auth')->group(function () {
 
 // Verb	URL	Action	Route Name
 Route::resource('chirps',ChirpController::class)
-    ->only(['index', 'store', 'edit', 'update'])     // GET /chirps index chirps.index
+    ->only(['index', 'store', 'edit', 'update','destroy'])     // GET /chirps index chirps.index
     ->middleware(['auth', 'verified']);              // POST /chirps store chirps.store
 
 require __DIR__.'/auth.php';
